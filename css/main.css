@@ -95,43 +95,84 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 html {
-  background-color: darkslategray;
-  height: 100%;
-  width: 100%;
+    background-color: darkslategray;
+    height: 100%;
+    width: 100%;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  padding: 2em;
-  font-size: 1.25em;
-  height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0 2em;
+    font-size: 1.25em;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
 }
 
-.wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+.bio-container {
+    max-width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
-.div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  color: whitesmoke;
-  line-height: 1.5em;
-  font-size: 0.95em;
+header,
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.wrapper span {
+h1 {
     font-family: 'Lora', sans-serif;
+    font-size: 3em;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid whitesmoke;
+}
+
+main p {
     font-size: 1.3em;
-  }
+}
+
+main p span {
+    font-family: 'Lora', sans-serif;
+    font-size: 1.1em;
+    color: gold;
+}
+
+.bio-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5em;
+    font-size: 1.1em;
+}
+
+.bio-items span {
+    font-family: 'Lora', sans-serif;
+    color: gold;
+}
+
+footer {
+    border-top: 1px solid whitesmoke;
+}
+
+.fa-brands {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 1em;
+    font-style: normal;
+    /* the above changes the default icon from italic to normal (found in Github: https://github.com/live-composer/live-composer-page-builder/issues/213*/
+    padding-right: 20px;
+    margin-top: 30px;
+}
+
+/*You can change the color of the font awesome icons by adding color to the above css selector, otherwise, it just adopts the color set to the body element*/
 
 /* ==========================================================================
    Helper classes
@@ -199,8 +240,10 @@ body {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -214,9 +257,9 @@ body {
    ========================================================================== */
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -226,25 +269,37 @@ body {
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-   @media all and (min-width: 1200px) {
-
-    .div-1, .div-2, .div-3 {
-        width: 30%;
-    }
-
-    .div-1, .div-2 {
-        border-right: 1px solid whitesmoke; 
-        padding-right: 30px;
+@media all and (max-width: 768px) {
+    body {
+        padding: 1em;
     }
 }
 
+@media (min-width: 1200px) {
+    .bio-items {
+        flex-basis: 30%;
+    }
+
+    #div-2 p {
+        border-left: 1px solid whitesmoke;
+        border-right: 1px solid whitesmoke;
+        padding: 0 30px;
+    }
+}
+
+/*** By setting the border on the div's p (#div-2) element, 
+the borders fit or take the height of the div element instead of the div element, 
+which is larger, so that's why it was taller. ***/
+
 
 @media print {
+
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;

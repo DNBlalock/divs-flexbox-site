@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Make me into a grid!</title>
+    <title>My First Flexbox Layout!</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,6 +13,9 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- FontAwesome CDN version 5.5 -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lora:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
@@ -23,21 +26,37 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <section class="wrapper">
-        <div class="div-1">
-            <p>I was born and raised on the South Side of Chicago and take <span>much pride</span> in that. My immediate family members
-            are both from the South Side and West Side's of the city.</p>
+    <section class="bio-container">
+        <header>
+            <h1>Hi. I'm Darion.</h1>
+        </header>
+        <main>
+            <p>I am an aspiring <span>Responsive Developer</span> aiming to create visually appealing
+                websites and applications that are accessible to all users. When I'm not working towards this goal, I
+                enjoy watching football, scandal documentaries, and romantic comedies with my wife!
+            </p>
+        </main>
+        <div id="div-1" class="bio-items">
+            <p>I was born and raised on the South Side of Chicago and take <span>much pride</span> in that. My immediate
+                family members
+                are both from the South Side and West Side of the city.</p>
         </div>
-        <div class="div-2">
-           <p> <span>My passion:</span> I am a HUGE fan of football - I gravitate
-            much more towards college football, but watch the pros as well. I even converted my wife into a football
-            fan!</p>
+        <div id="div-2" class="bio-items">
+            <p> <span>My passion:</span> I am a HUGE fan of football! Typically I gravitate
+                much more towards collegiate, but watch the pros as well. I even converted my wife into a football
+                fan!</p>
         </div>
-        <div class="div-3">
-            <p><span>A fun fact:</span> As a South Sider, most would assume I grew up a White Sox fan, but I grew up watching
-            the Cubs with my father. However, I've only ever been to White Sox games.</p>
+        <div id="div-3" class="bio-items">
+            <p><span>A fun fact:</span> As a South Sider, most would assume I grew up a White Sox fan, but I grew up
+                watching the Cubs with my father. However, I've only ever been to White Sox games.</p>
         </div>
+        <footer>
+            <i class="fa-brands fa-facebook"></i></a>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </footer>
     </section>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
